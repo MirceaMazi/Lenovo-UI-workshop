@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link id="theme-stylesheet" rel="stylesheet" href="../CSS/index.css" />
+    <title>UI workshop</title>
+  </head>
+  <body class="center-content column">
+    <h2>HTML Basics</h2>
+
+    <nav>
+      <button onclick="navigatePreviousPage()">Previous page</button>
+      <button onclick="navigateNextPage()">Next page</button>
+    </nav>
+
+    <p>Please select a tag:</p>
+    <select onchange="changeShownTag()">
+      <option value="div">div</option>
+      <option value="p">p</option>
+      <option value="h1">h1</option>
+      <option value="a">a</option>
+      <option value="img">img</option>
+      <option value="ul">ul</option>
+      <option value="ol">ol</option>
+      <option value="table">table</option>
+      <option value="form">form</option>
+    </select>
+
+    <div class="tags-container">
+      <!-- div tag -->
+      <section class="example-tag center-content possible" id="div">
+        &lt;<span class="tag-format">div</span>&gt;
+      </section>
+      <section class="tag-explanation center-content possible" id="div">
+        <p>
+          The &lt;<span class="tag-format">div</span>&gt; tag is a
+          <span class="text-highlight">generic container</span> used to group
+          elements together. It has
+          <span class="text-highlight">no semantic meaning</span>, but is useful
+          for <span class="text-highlight">styling and layout</span>. It is
+          often combined with CSS to organize a webpage.
+        </p>
+      </section>
+
+      <!-- p tag -->
+      <section class="example-tag center-content possible" id="p">
+        &lt;<span class="tag-format">p</span>&gt;
+      </section>
+      <section class="tag-explanation center-content possible" id="p">
+        <p>
+          The &lt;<span class="tag-format">p</span>&gt; tag is used for
+          <span class="text-highlight">paragraphs of text</span>. Browsers
+          automatically add some
+          <span class="text-highlight">margin</span> around it for readability.
+          It helps structure written content in a clear and accessible way.
+        </p>
+      </section>
+
+      <!-- h1 tag -->
+      <section class="example-tag center-content possible" id="h1">
+        &lt;<span class="tag-format">h1</span>&gt;
+      </section>
+      <section class="tag-explanation center-content possible" id="h1">
+        <p>
+          The &lt;<span class="tag-format">h1</span>&gt; tag represents the
+          <span class="text-highlight">highest level heading</span>. It is very
+          important for <span class="text-highlight">SEO</span> and page
+          structure. Proper use of heading tags improves accessibility and
+          search engine rankings.
+        </p>
+      </section>
+
+      <!-- a tag -->
+      <section class="example-tag center-content possible" id="a">
+        &lt;<span class="tag-format">a</span>&gt;
+      </section>
+      <section class="tag-explanation center-content possible" id="a">
+        <p>
+          The &lt;<span class="tag-format">a</span>&gt; tag creates
+          <span class="text-highlight"
+            ><a
+              href="https://youtu.be/bsKfKTvvNk0?si=zYrgTkGea5iOkOm0"
+              target="_blank"
+              style="text-decoration: underline"
+              >hyperlinks</a
+            ></span
+          >. Use the <span class="text-highlight">href</span> attribute to
+          specify the <span class="text-highlight">destination URL</span>. Links
+          allow navigation between pages, and they can also open files, trigger
+          actions, or link to different sections within the same document.
+        </p>
+      </section>
+
+      <!-- img tag -->
+      <section class="example-tag center-content possible" id="img">
+        &lt;<span class="tag-format">img</span>&gt;
+      </section>
+      <section class="tag-explanation center-content possible" id="img">
+        <p>
+          The &lt;<span class="tag-format">img</span>&gt; tag embeds
+          <span class="text-highlight">images</span>. It requires the
+          <span class="text-highlight">src</span> attribute to define the image
+          source and the <span class="text-highlight">alt</span> attribute for
+          accessibility. The <span class="text-highlight">alt</span> text is
+          important for screen readers and helps when images fail to load.
+        </p>
+        <img
+          src="https://placedog.net/600/300"
+          alt="A cute dog"
+          style="width: 200px"
+        />
+      </section>
+
+      <!-- ul tag -->
+      <section class="example-tag center-content possible" id="ul">
+        &lt;<span class="tag-format">ul</span>&gt;
+      </section>
+      <section class="tag-explanation center-content possible" id="ul">
+        <ul>
+          <li>
+            Uses &lt;<span class="tag-format">li</span>&gt; for each list item.
+          </li>
+          <li>Displays items with bullet points by default.</li>
+          <li>Great for lists where order doesn't matter.</li>
+        </ul>
+      </section>
+
+      <!-- ol tag -->
+      <section class="example-tag center-content possible" id="ol">
+        &lt;<span class="tag-format">ol</span>&gt;
+      </section>
+      <section class="tag-explanation center-content possible" id="ol">
+        <ol>
+          <li>
+            Uses &lt;<span class="tag-format">li</span>&gt; to define list
+            items.
+          </li>
+          <li>Items are automatically numbered.</li>
+          <li>Great for step-by-step guides and rankings.</li>
+        </ol>
+      </section>
+
+      <!-- table tag -->
+      <section class="example-tag center-content possible" id="table">
+        &lt;<span class="tag-format">table</span>&gt;
+      </section>
+      <section class="tag-explanation center-content possible" id="table">
+        <table border="1">
+          <tr>
+            <th>Tag</th>
+            <th>Reason to Use</th>
+            <th>Basic Syntax</th>
+          </tr>
+          <tr>
+            <td>&lt;<span class="tag-format">table</span>&gt;</td>
+            <td>Defines the table structure</td>
+            <td>
+              <code
+                >&lt;<span class="tag-format">table</span>&gt;...&lt;/<span
+                  class="tag-format"
+                  >table</span
+                >&gt;</code
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;<span class="tag-format">tr</span>&gt;</td>
+            <td>Defines a table row</td>
+            <td>
+              <code
+                >&lt;<span class="tag-format">tr</span>&gt;...&lt;/<span
+                  class="tag-format"
+                  >tr</span
+                >&gt;</code
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;<span class="tag-format">th</span>&gt;</td>
+            <td>Defines a header cell</td>
+            <td>
+              <code
+                >&lt;<span class="tag-format">th</span>&gt;Header&lt;/<span
+                  class="tag-format"
+                  >th</span
+                >&gt;</code
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;<span class="tag-format">td</span>&gt;</td>
+            <td>Defines a standard cell</td>
+            <td>
+              <code
+                >&lt;<span class="tag-format">td</span>&gt;Data&lt;/<span
+                  class="tag-format"
+                  >td</span
+                >&gt;</code
+              >
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- form tag -->
+      <section class="example-tag center-content possible" id="form">
+        &lt;<span class="tag-format">form</span>&gt;
+      </section>
+      <section class="tag-explanation center-content possible" id="form">
+        <p>
+          The &lt;<span class="tag-format">form</span>&gt; tag is used to
+          <span class="text-highlight">collect user input</span>. It contains
+          input fields like
+          <span class="text-highlight">textboxes, checkboxes, and buttons</span
+          >. Forms allow users to submit data, such as login credentials,
+          feedback, or search queries, to a server.
+        </p>
+      </section>
+    </div>
+
+    <script src="../JS/index.js"></script>
+    <script src="../JS/HTML_basics.js"></script>
+  </body>
+</html>

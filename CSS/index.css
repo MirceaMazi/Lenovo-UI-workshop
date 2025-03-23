@@ -1,0 +1,233 @@
+/* Page structure */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif, Arial;
+}
+
+:root {
+  --main: #e1140a;
+  --secondary: #580c1f;
+  --accent: #0075f2;
+
+  --white: whitesmoke;
+  --black: #282c34;
+
+  --text: #abaa93;
+  --tag: #c24034;
+  --class: #c76b3c;
+  --highlight: #61aae9;
+
+  --function-col: #dcdcaa;
+  --keyword-ctrl: #c586c0;
+  --keyword: #569cd6;
+  --variable: #9cdcfe;
+  --string: #ce9178;
+  --bracket: #808080;
+  --css: #d7ba7d;
+  --css-value: #b5cea8;
+}
+
+body {
+  background: linear-gradient(90deg, var(--main) 5%, var(--secondary) 75%);
+  height: 100vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Components styling */
+button {
+  width: 120px;
+  height: 40px;
+
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+
+  transition: background 0.2s ease-in, transform 0.1s ease-out,
+    box-shadow 0.2s ease-in;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background: var(--white);
+  color: var(--accent);
+
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  position: fixed;
+  top: 2vh;
+  right: 2vw;
+
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+p {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  line-height: 1.6;
+}
+
+h1 {
+  color: var(--white);
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.6;
+  letter-spacing: 0.4px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  color: var(--white);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.4px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h3 {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.4px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+select {
+  appearance: none;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 0px;
+  border-radius: 8px;
+  background-color: var(--accent);
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+
+  /* Custom dropdown arrow icon */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%233498db" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18px" height="18px"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  padding-right: 35px;
+}
+
+select:hover {
+  background-color: var(--white);
+  color: var(--accent);
+}
+
+select:focus {
+  background-color: var(--white);
+  color: var(--accent);
+}
+
+div {
+  background-color: var(--black);
+  border: 3px dashed var(--text);
+  color: var(--text);
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  font-size: 18px;
+  margin: 20px auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Independent classes */
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.gap {
+  gap: 15px;
+}
+
+button.special-button {
+  width: 180px;
+  height: 60px;
+  font-size: 18px;
+}
+
+div.tags-container {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 20rem;
+  margin: 20px;
+}
+
+p.alt-text {
+  font-weight: normal;
+  color: var(--text);
+}
+
+.example-tag {
+  height: 100%;
+  flex-grow: 0;
+  font-size: 100px;
+}
+
+.tag-explanation {
+  height: 100%;
+  flex-grow: 1;
+}
+
+.tag-explanation p,
+ul,
+ol {
+  font-size: 2rem;
+  font-weight: normal;
+  color: var(--text);
+}
+
+.tag-format {
+  color: var(--tag);
+}
+
+.text-highlight {
+  color: var(--highlight);
+}
