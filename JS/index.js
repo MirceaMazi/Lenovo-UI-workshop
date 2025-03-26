@@ -1,5 +1,10 @@
 // Overall JS
-const pages = ["index.html", "HTML_basics.html", "CSS_basics.html"];
+const pages = [
+  "index.html",
+  "HTML_basics.html",
+  "CSS_basics.html",
+  "layout_fundamentals.html",
+];
 
 function getCurrentPage() {
   const currentPage = window.location.pathname.substring(6);

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link id="theme-stylesheet" rel="stylesheet" href="../CSS/index.css" />
+    <title>UI workshop</title>
+  </head>
+  <body class="page-layout">
+    <h2>Layout Fundamentals</h2>
+
+    <nav>
+      <button onclick="navigatePreviousPage()">Previous page</button>
+      <button onclick="navigateNextPage()">Next page</button>
+    </nav>
+
+    <div class="general-explanation column align">
+      <h3>What is the DOM Box-Model?</h3>
+
+      <section class="general-explanation column center-content">
+        <p>
+          The DOM <span class="text-highlight">Box Model</span> is a layout
+          model used by web browsers to render HTML elements. It consists of
+          four main components: <span class="text-highlight">content</span>,
+          <span class="text-highlight">padding</span>,
+          <span class="text-highlight">border</span>, and
+          <span class="text-highlight">margin</span>.
+        </p>
+      </section>
+
+      <section class="general-explanation align apart">
+        <textarea id="editable-area" data-target="editable-object-1">
+            #box-model-example {
+                margin: 10px;
+                border: 10px solid var(--main);
+                padding: 10px;
+              }
+        </textarea>
+
+        <section id="box-model-margin">
+          <section
+            id="box-model-example"
+            data-targetable="editable-object-1"
+            style="width: 400px; font-size: 40px"
+          >
+            Modify me!!!
+          </section>
+        </section>
+      </section>
+
+      <h3>Display types</h3>
+
+      <section class="general-explanation column center-content">
+        <p>
+          The <span class="text-highlight">display</span> property in CSS
+          determines how an element is displayed on a webpage. It controls the
+          behavior of elements, such as whether they are block-level elements,
+          inline elements, or flexible containers.
+        </p>
+        <ul>
+          <li>
+            <span class="text-highlight">block:</span> The element takes up the
+            full width available, and each element is placed on a new line.
+          </li>
+          <li>
+            <span class="text-highlight">inline:</span> The element only takes
+            up as much width as necessary, and elements can be placed next to
+            each other.
+          </li>
+          <li>
+            <span class="text-highlight">flex:</span> Allows for flexible
+            layouts where items can grow and shrink, and elements can be aligned
+            in various ways.
+          </li>
+          <li>
+            <span class="text-highlight">grid:</span> Enables creating a
+            two-dimensional grid layout, allowing elements to be placed into
+            rows and columns.
+          </li>
+        </ul>
+      </section>
+      <!-- ////////////////////////////////////////////////////////////////////////////////// -->
+
+      <h4>Try Changing the Display Property!</h4>
+      <p>
+        Modify the display property of the below elements and observe how they
+        behave differently in flex and grid layouts:
+      </p>
+      
+      <!-- Flex Example Section -->
+      <h5>Flex Example</h5>
+      <p>Modify the display property for the flex layout:</p>
+      
+      <textarea id="editable-flex" data-target="editable-flex-object">
+          #flex-example {
+              display: flex;
+              justify-content: space-between;
+              background-color: #f1f1f1;
+              padding: 10px;
+              flex-direction:column;
+            }
+      
+          #flex-example div {
+              flex: 1;
+              background-color: var(--main);
+              color: white;
+              padding: 20px;
+              margin-right: 10px;
+            }
+      </textarea>
+      
+      <section id="display-flex-example-section">
+        <section id="flex-example" data-targetable="editable-flex-object" style="font-size: 20px">
+          <div>Flex Item 1</div>
+          <div>Flex Item 2</div>
+          <div>Flex Item 3</div>
+        </section>
+      </section>
+      
+      <!-- Grid Example Section -->
+      <h5>Grid Example</h5>
+      <p>Modify the display property for the grid layout:</p>
+      
+      <textarea id="editable-grid" data-target="editable-grid-object">
+          #grid-example {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 10px;
+              background-color: #f1f1f1;
+              padding: 10px;
+            }
+      
+          #grid-example div {
+              background-color: var(--main);
+              color: white;
+              padding: 20px;
+            }
+      </textarea>
+      
+      <section id="display-grid-example-section">
+        <section id="grid-example" data-targetable="editable-grid-object" style="font-size: 20px">
+          <div>Grid Item 1</div>
+          <div>Grid Item 2</div>
+          <div>Grid Item 3</div>
+        </section>
+      </section>
+      </section>
+    </div>
+
+    <script src="../JS/index.js"></script>
+    <script src="../JS/CSS_basics.js"></script>
+  </body>
+</html>

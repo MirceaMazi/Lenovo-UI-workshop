@@ -20,15 +20,6 @@
   --class: #c76b3c;
   --id: #61a3bd;
   --highlight: #61aae9;
-
-  --function-col: #dcdcaa;
-  --keyword-ctrl: #c586c0;
-  --keyword: #569cd6;
-  --variable: #9cdcfe;
-  --string: #ce9178;
-  --bracket: #808080;
-  --css: #d7ba7d;
-  --css-value: #b5cea8;
 }
 
 body {
@@ -176,7 +167,7 @@ textarea {
   color: var(--text);
   padding: 20px 0px;
   border-radius: 10px;
-  height: 300px;
+  height: 150px;
   width: 400px;
   font-size: 18px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -276,7 +267,8 @@ p.alt-text {
   margin: 20px;
 }
 
-.general-explanation p {
+.general-explanation p,
+li {
   font-size: 1.2rem;
   font-weight: normal;
   color: var(--text);
@@ -288,6 +280,17 @@ ol {
   font-size: 2rem;
   font-weight: normal;
   color: var(--text);
+}
+
+#box-model-example {
+  margin: 10px;
+  border: 10px solid var(--main);
+  padding: 10px;
+  background-color: var(--secondary);
+}
+
+#box-model-margin {
+  background-color: var(--accent);
 }
 
 .tag-format {
