@@ -1,6 +1,3 @@
-const editableObject = document.getElementById("editable-object");
-const customCSS = document.getElementById("editable-area");
-
 function toggleStylesheet() {
   const link = document.getElementById("theme-stylesheet");
 
@@ -14,13 +11,3 @@ function toggleStylesheet() {
     document.head.appendChild(newLink);
   }
 }
-
-console.log(customCSS.innerHTML);
-
-function modifyCSS() {
-  const stringCSS = customCSS.value;
-
-  editableObject.style = stringCSS;
-}
-
-modifyCSS();

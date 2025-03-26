@@ -6,7 +6,7 @@
     <link id="theme-stylesheet" rel="stylesheet" href="../CSS/index.css" />
     <title>UI workshop</title>
   </head>
-  <body class="center-content column">
+  <body class="page-layout">
     <h2>CSS Basics</h2>
 
     <nav>
@@ -14,14 +14,77 @@
       <button onclick="navigateNextPage()">Next page</button>
     </nav>
 
-    <div class="tags-container row">
-      <textarea id="editable-area" data-target="editable-object-1">
-height: 10000px</textarea
-      >
-      <div id="editable-object-1">asdasd</div>
-    </div>
+    <div class="general-explanation column align">
+      <h3>What are the main components of CSS?</h3>
+      <section class="general-explanation column center-content">
+        <p>
+          <span class="class-format">Classes</span> - used to apply the same
+          styles to multiple elements. You define a class by using a period
+          <span class="text-highlight">(.)</span> followed by the class name in
+          your CSS.
+        </p>
 
-    <button onclick="toggleStylesheet()">Toggle CSS</button>
+        <p>
+          <span class="id-format">IDs</span> - used to apply styles to a unique
+          element on the page. You define an ID by using a hash
+          <span class="text-highlight">(#)</span> followed by the ID name in
+          your CSS.
+        </p>
+
+        <p>
+          <span class="tag-format">Tags</span> - used to apply styles to all
+          elements of a specific type. You define a tag by using the element
+          name in your CSS, like <span class="text-highlight">div</span>,
+          <span class="text-highlight">p</span>, or
+          <span class="text-highlight">h1</span>.
+        </p>
+
+        <p>
+          <span class="tag-format">!important</span> - used to give a CSS rule
+          higher priority, overriding other conflicting styles, even if they
+          have higher specificity. It is added at the end of the CSS rule, like
+          this: <span class="text-highlight">color: red !important;</span>.
+          However, it should be used sparingly as it can make debugging and
+          maintaining your CSS harder.
+        </p>
+      </section>
+
+      <h3>Are all of these rules equal?</h3>
+
+      <section class="general-explanation align apart">
+        <textarea id="editable-area" data-target="editable-object-1">
+          /* Lowest specificity */
+          section {
+            color: red;
+            font-size: 20px; 
+            padding: 10px;
+          }
+
+          /* Class selector with higher specificity */
+          .blue-background {
+            color: lightblue !important; /* Will override the red */
+            font-weight: bold;
+          }
+
+          /* ID selector with even higher specificity */
+          #special-box {
+            color: burlywood; 
+            font-style: italic;
+          }
+        </textarea>
+
+        <section
+          data-targetable="editable-object-1"
+          style="width: 400px; font-size: 40px"
+        >
+          Modify me!!!
+        </section>
+      </section>
+
+      <h3>Is CSS that important to the way my page looks?</h3>
+      <br />
+      <button onclick="toggleStylesheet()">Toggle CSS</button>
+    </div>
 
     <script src="../JS/index.js"></script>
     <script src="../JS/CSS_basics.js"></script>

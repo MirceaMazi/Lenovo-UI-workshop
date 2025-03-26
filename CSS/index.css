@@ -13,10 +13,12 @@
 
   --white: whitesmoke;
   --black: #282c34;
+  --secondary-black: #1e2227;
 
   --text: #abaa93;
   --tag: #c24034;
   --class: #c76b3c;
+  --id: #61a3bd;
   --highlight: #61aae9;
 
   --function-col: #dcdcaa;
@@ -111,6 +113,7 @@ h2 {
   letter-spacing: 0.4px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   text-align: center;
+  margin-top: 5rem;
 }
 
 h3 {
@@ -167,11 +170,62 @@ div {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+textarea {
+  background-color: var(--secondary-black);
+  border: 3px dashed var(--text);
+  color: var(--text);
+  padding: 20px 0px;
+  border-radius: 10px;
+  height: 300px;
+  width: 400px;
+  font-size: 18px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 3px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+textarea:focus-visible {
+  outline: none;
+}
+
 /* Independent classes */
+.page-layout {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .center-content {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.align {
+  align-items: center;
+}
+
+.justify {
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.apart {
+  justify-content: space-between;
 }
 
 .column {
@@ -216,6 +270,18 @@ p.alt-text {
   flex-grow: 1;
 }
 
+.general-explanation {
+  display: flex;
+  width: 80%;
+  margin: 20px;
+}
+
+.general-explanation p {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: var(--text);
+}
+
 .tag-explanation p,
 ul,
 ol {
@@ -226,6 +292,14 @@ ol {
 
 .tag-format {
   color: var(--tag);
+}
+
+.class-format {
+  color: var(--class);
+}
+
+.id-format {
+  color: var(--id);
 }
 
 .text-highlight {
