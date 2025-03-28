@@ -190,6 +190,11 @@ textarea:focus-visible {
   outline: none;
 }
 
+ul,
+ol {
+  text-align: left;
+}
+
 /* Independent classes */
 .page-layout {
   display: flex;
@@ -293,6 +298,29 @@ ol {
   background-color: var(--accent);
 }
 
+#flex-example {
+  background-color: var(--accent);
+  display: flex;
+  width: 30rem;
+  margin: 2rem;
+  border-radius: 10px;
+}
+
+#grid-example {
+  background-color: var(--accent);
+  display: grid;
+  width: 30rem;
+  margin: 2rem;
+  border-radius: 10px;
+}
+
+.display-example-box {
+  width: 8rem;
+  height: 5rem;
+  background-color: var(--secondary);
+  margin: 20px;
+}
+
 .tag-format {
   color: var(--tag);
 }
@@ -307,4 +335,12 @@ ol {
 
 .text-highlight {
   color: var(--highlight);
+}
+
+/* Media queries */
+@media only screen and (max-width: 600px) {
+  div {
+    display: flex;
+    flex-direction: column;
+  }
 }

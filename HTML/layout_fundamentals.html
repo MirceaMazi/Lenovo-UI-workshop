@@ -79,71 +79,65 @@
           </li>
         </ul>
       </section>
-      <!-- ////////////////////////////////////////////////////////////////////////////////// -->
 
-      <h4>Try Changing the Display Property!</h4>
-      <p>
-        Modify the display property of the below elements and observe how they
-        behave differently in flex and grid layouts:
-      </p>
-      
       <!-- Flex Example Section -->
-      <h5>Flex Example</h5>
+      <h3>Flex Example</h3>
+      <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+        >Press to see details</a
+      >
       <p>Modify the display property for the flex layout:</p>
-      
-      <textarea id="editable-flex" data-target="editable-flex-object">
+      <section class="center-content">
+        <textarea id="editable-flex" data-target="editable-flex-object">
           #flex-example {
               display: flex;
+              flex-wrap: no-wrap;
+              flex-direction:row;
               justify-content: space-between;
-              background-color: #f1f1f1;
-              padding: 10px;
-              flex-direction:column;
+              align-items: center;
+              gap: 10px; 
             }
-      
-          #flex-example div {
-              flex: 1;
-              background-color: var(--main);
-              color: white;
-              padding: 20px;
-              margin-right: 10px;
-            }
-      </textarea>
-      
-      <section id="display-flex-example-section">
-        <section id="flex-example" data-targetable="editable-flex-object" style="font-size: 20px">
-          <div>Flex Item 1</div>
-          <div>Flex Item 2</div>
-          <div>Flex Item 3</div>
+      </textarea
+        >
+
+        <section class="display-playground">
+          <section id="flex-example" data-targetable="editable-flex-object">
+            <div class="display-example-box">Flex Item 1</div>
+            <div class="display-example-box">Flex Item 2</div>
+            <div class="display-example-box">Flex Item 3</div>
+          </section>
         </section>
       </section>
-      
+
       <!-- Grid Example Section -->
-      <h5>Grid Example</h5>
+      <h3>Grid Example</h3>
+      <a href="https://css-tricks.com/snippets/css/complete-guide-grid/"
+        >Press to see details</a
+      >
       <p>Modify the display property for the grid layout:</p>
-      
-      <textarea id="editable-grid" data-target="editable-grid-object">
+
+      <section class="center-content">
+        <textarea id="editable-grid" data-target="editable-grid-object">
           #grid-example {
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-              gap: 10px;
-              background-color: #f1f1f1;
-              padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            gap: 10px;
+            justify-items: center;
+            align-items: center;
+            justify-content: space-between;
+            align-content: space-around;
+            padding: 10px;
             }
-      
-          #grid-example div {
-              background-color: var(--main);
-              color: white;
-              padding: 20px;
-            }
-      </textarea>
-      
-      <section id="display-grid-example-section">
-        <section id="grid-example" data-targetable="editable-grid-object" style="font-size: 20px">
-          <div>Grid Item 1</div>
-          <div>Grid Item 2</div>
-          <div>Grid Item 3</div>
+      </textarea
+        >
+
+        <section class="display-playground">
+          <section id="grid-example" data-targetable="editable-grid-object">
+            <div class="display-example-box">Grid Item 1</div>
+            <div class="display-example-box">Grid Item 2</div>
+            <div class="display-example-box">Grid Item 3</div>
+          </section>
         </section>
-      </section>
       </section>
     </div>
 
