@@ -307,16 +307,34 @@ ol {
 }
 
 #grid-example {
-  background-color: var(--accent);
   display: grid;
-  width: 30rem;
-  margin: 2rem;
-  border-radius: 10px;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header ."
+    "main main sidebar"
+    "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
 }
 
 .display-example-box {
-  width: 8rem;
-  height: 5rem;
+  width: auto;
   background-color: var(--secondary);
   margin: 20px;
 }

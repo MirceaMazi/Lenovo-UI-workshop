@@ -82,7 +82,9 @@
 
       <!-- Flex Example Section -->
       <h3>Flex Example</h3>
-      <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+      <a
+        target="_blank"
+        href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
         >Press to see details</a
       >
       <p>Modify the display property for the flex layout:</p>
@@ -110,7 +112,9 @@
 
       <!-- Grid Example Section -->
       <h3>Grid Example</h3>
-      <a href="https://css-tricks.com/snippets/css/complete-guide-grid/"
+      <a
+        target="_blank"
+        href="https://css-tricks.com/snippets/css/complete-guide-grid/"
         >Press to see details</a
       >
       <p>Modify the display property for the grid layout:</p>
@@ -119,23 +123,23 @@
         <textarea id="editable-grid" data-target="editable-grid-object">
           #grid-example {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: auto;
-            gap: 10px;
-            justify-items: center;
-            align-items: center;
-            justify-content: space-between;
-            align-content: space-around;
-            padding: 10px;
-            }
+            grid-gap: 1rem;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+              "header header ."
+              "main main sidebar"
+              "footer footer footer";
+          }
       </textarea
         >
 
         <section class="display-playground">
           <section id="grid-example" data-targetable="editable-grid-object">
-            <div class="display-example-box">Grid Item 1</div>
-            <div class="display-example-box">Grid Item 2</div>
-            <div class="display-example-box">Grid Item 3</div>
+            <div class="display-example-box header">Header</div>
+            <div class="display-example-box sidebar">Sidebar</div>
+            <div class="display-example-box main">Main</div>
+            <div class="display-example-box footer">Footer</div>
           </section>
         </section>
       </section>
