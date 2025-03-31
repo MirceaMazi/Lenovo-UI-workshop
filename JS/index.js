@@ -9,7 +9,7 @@ const pages = [
 ];
 
 function getCurrentPage() {
-  const currentPage = window.location.pathname.substring(25);
+  const currentPage = window.location.pathname.split("/").pop();
 
   return pages.findIndex((page) => page === currentPage);
 }
