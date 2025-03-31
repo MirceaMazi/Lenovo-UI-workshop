@@ -32,13 +32,47 @@
         </p>
       </section>
 
+      <h3>const vs let in JavaScript</h3>
+      <section class="general-explanation align apart">
+        <section class="general-explanation column center-content">
+          <p>
+            In JavaScript, <code>const</code> and <code>let</code> are used to
+            declare variables, but they behave differently:
+          </p>
+          <ul>
+            <li>
+              <span class="text-highlight">const</span> - Used to declare
+              variables whose values cannot be reassigned after initialization.
+              It is block-scoped.
+            </li>
+            <li>
+              <span class="text-highlight">let</span> - Used to declare
+              variables whose values can be reassigned. It is also block-scoped.
+            </li>
+          </ul>
+        </section>
+        <textarea style="width: 600px; height: 200px">
+          const pi = 3.14;
+          // Error: Assignment to constant variable.
+          pi = 3.14159; 
+
+          let age = 25;
+          // This is allowed.
+          age = 26; 
+        </textarea>
+      </section>
+
       <h3>JavaScript Data Types</h3>
       <section class="general-explanation align apart">
-        <textarea>
-          function greet(name) {
-            return `Hello, ${name}!`;
-          }
-          console.log(greet("Alice"));
+        <textarea style="height: 200px">
+          let a = 10;
+          let b = "10";
+
+          alert(
+            `${typeof a} and ${typeof b} are ${
+              a === b ? "the same type" : "different types"
+            }`
+          );
         </textarea>
 
         <section class="general-explanation column center-content">
@@ -78,8 +112,83 @@
         </section>
       </section>
 
+      <h3>Array Methods in JavaScript</h3>
+      <section class="general-explanation align apart">
+        <section class="general-explanation column center-content">
+          <p>
+            JavaScript provides several built-in methods to manipulate arrays.
+            Some commonly used array methods include:
+          </p>
+          <ul>
+            <li>
+              <span class="text-highlight">push()</span> - Adds one or more
+              elements to the end of an array.
+            </li>
+            <li>
+              <span class="text-highlight">pop()</span> - Removes the last
+              element from an array.
+            </li>
+            <li>
+              <span class="text-highlight">shift()</span> - Removes the first
+              element from an array.
+            </li>
+            <li>
+              <span class="text-highlight">unshift()</span> - Adds one or more
+              elements to the beginning of an array.
+            </li>
+            <li>
+              <span class="text-highlight">map()</span> - Creates a new array
+              with the results of calling a provided function on every element
+              in the array.
+            </li>
+            <li>
+              <span class="text-highlight">filter()</span> - Creates a new array
+              with all elements that pass the test implemented by the provided
+              function.
+            </li>
+          </ul>
+        </section>
+        <textarea style="width: 1200px; height: 250px">
+          let numbers = [1, 2, 3, 4];
+          numbers.push(5); // [1, 2, 3, 4, 5]
+          numbers.pop(); // [1, 2, 3, 4]
+          
+          let doubled = numbers.map((num) => num * 2);
+          let evenNumbers = numbers.filter((num) => num % 2 === 0);
+          alert("original array: " + numbers);
+          alert("doubled array: " + doubled);
+          alert("even numbers: " + evenNumbers);
+        </textarea>
+      </section>
+
       <h3>Scopes in JavaScript</h3>
       <section class="general-explanation align apart">
+        <textarea style="width: 1200px; height: 550px">
+          // Global Scope
+          let globalVariable = "I am a global variable";
+
+          function showScopes() {
+            // Function Scope
+            let functionVariable = "I am a function-scoped variable";
+
+            if (true) {
+              // Block Scope
+              let blockVariable = "I am a block-scoped variable";
+              console.log(blockVariable); // Accessible inside this block
+            }
+
+            console.log(globalVariable); // Accessible anywhere in the script
+            console.log(functionVariable); // Accessible within this function
+            // console.log(blockVariable); // Error: blockVariable is not defined
+          }
+
+          showScopes();
+
+          console.log(globalVariable); // Accessible globally
+          // console.log(functionVariable); // Error: functionVariable is not defined
+          // console.log(blockVariable); // Error: blockVariable is not defined
+        </textarea>
+
         <section class="general-explanation column center-content">
           <p>
             Scope determines the accessibility of variables. JavaScript has
@@ -102,24 +211,10 @@
             </li>
           </ul>
         </section>
-
-        <textarea>
-          function greet(name) {
-            return `Hello, ${name}!`;
-          }
-          console.log(greet("Alice"));
-        </textarea>
       </section>
 
       <h3>Types of Functions</h3>
       <section class="general-explanation align apart">
-        <textarea>
-          function greet(name) {
-            return `Hello, ${name}!`;
-          }
-          console.log(greet("Alice"));
-        </textarea>
-
         <section class="general-explanation column center-content">
           <p>JavaScript supports different ways of defining functions:</p>
           <ul>
@@ -137,6 +232,18 @@
             </li>
           </ul>
         </section>
+
+        <textarea style="width: 600px; height: 250px">
+          function greet(name) {
+            return `Hello, ${name}!`;
+          }
+
+          // const greet = (name) => {
+          // return `Hello, ${name}!`;
+          // };
+                    
+          alert(greet("Cristi@mereuaproape.com"));
+        </textarea>
       </section>
     </div>
 

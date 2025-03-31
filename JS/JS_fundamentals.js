@@ -7,17 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
 
       const textarea = event.target;
-      const scriptTagId = "dynamic-script";
 
-      const existingScript = document.getElementById(scriptTagId);
-      if (existingScript) {
-        document.body.removeChild(existingScript);
+      // We can't add a simple script tag, because the context would be global
+      // If we have const a = 1 inside of a textarea
+      // After the first execution you would receive "Uncaught SyntaxError: Failed to execute 'appendChild' on 'Node': Identifier 'a' has already been declared"
+      // So we execute the code inplace
+      try {
+        const script = textarea.value.trim();
+        eval(script);
+      } catch (e) {
+        console.error("Error executing script:", e);
       }
-
-      const script = document.createElement("script");
-      script.textContent = textarea.value.trim();
-      script.id = scriptTagId;
-      document.body.appendChild(script);
     }
   });
 });

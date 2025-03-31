@@ -5,6 +5,7 @@ const pages = [
   "CSS_basics.html",
   "layout_fundamentals.html",
   "JS_fundamentals.html",
+  "feedback_form.html",
 ];
 
 function getCurrentPage() {
