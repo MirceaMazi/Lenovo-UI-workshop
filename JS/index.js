@@ -15,7 +15,12 @@ function getCurrentPage() {
 
 function navigatePreviousPage() {
   const currentIndex = getCurrentPage();
-  window.location.href = pages[currentIndex - 1];
+
+  if (currentIndex !== 1) {
+    window.location.href = pages[currentIndex - 1];
+  } else {
+    window.location.href = "../index.html";
+  }
 }
 
 function navigateNextPage() {
