@@ -10,7 +10,6 @@ const pages = [
 
 function getCurrentPage() {
   const currentPage = window.location.pathname.substring(25);
-  console.log(currentPage);
 
   return pages.findIndex((page) => page === currentPage);
 }
