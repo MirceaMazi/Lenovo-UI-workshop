@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link id="theme-stylesheet" rel="stylesheet" href="../CSS/index.css" />
+    <title>UI workshop</title>
+  </head>
+  <body class="page-layout">
+    <h2>JavaScript Fundamentals</h2>
+
+    <nav>
+      <button onclick="navigatePreviousPage()">Previous page</button>
+      <button onclick="navigateNextPage()">Next page</button>
+    </nav>
+
+    <div class="general-explanation column align">
+      <h3>Introduction to JavaScript</h3>
+      <section class="general-explanation column center-content">
+        <p>
+          JavaScript (JS) is a powerful programming language used primarily for
+          web development. It allows developers to create dynamic and
+          interactive web pages by controlling HTML and CSS, responding to user
+          interactions, and communicating with servers. It is one of the core
+          technologies of the web, alongside HTML and CSS.
+        </p>
+        <p>
+          JavaScript runs in the browser but can also be used on the server side
+          with environments like Node.js. It is a high-level, interpreted
+          language with features such as dynamic typing, event-driven
+          programming, and asynchronous execution.
+        </p>
+      </section>
+
+      <h3>JavaScript Data Types</h3>
+      <section class="general-explanation align apart">
+        <textarea>
+          function greet(name) {
+            return `Hello, ${name}!`;
+          }
+          console.log(greet("Alice"));
+        </textarea>
+
+        <section class="general-explanation column center-content">
+          <p>
+            JavaScript has different data types that determine the kind of data
+            a variable can hold. The main types are:
+          </p>
+          <ul>
+            <li>
+              <span class="text-highlight">String</span> - Represents text,
+              e.g., "Hello"
+            </li>
+            <li>
+              <span class="text-highlight">Number</span> - Represents integers
+              and floating-point numbers
+            </li>
+            <li>
+              <span class="text-highlight">Boolean</span> - True or false values
+            </li>
+            <li>
+              <span class="text-highlight">Object</span> - Collection of
+              properties
+            </li>
+            <li>
+              <span class="text-highlight">Array</span> - Ordered collection of
+              values
+            </li>
+            <li>
+              <span class="text-highlight">Undefined</span> - A variable
+              declared but not assigned a value
+            </li>
+            <li>
+              <span class="text-highlight">Null</span> - Represents an
+              intentional empty value
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <h3>Scopes in JavaScript</h3>
+      <section class="general-explanation align apart">
+        <section class="general-explanation column center-content">
+          <p>
+            Scope determines the accessibility of variables. JavaScript has
+            three main scopes:
+          </p>
+          <ul>
+            <li>
+              <span class="text-highlight">Global Scope</span> - Accessible
+              anywhere in the script.
+            </li>
+            <li>
+              <span class="text-highlight">Function Scope</span> - Variables
+              declared inside a function are only accessible within that
+              function.
+            </li>
+            <li>
+              <span class="text-highlight">Block Scope</span> - Variables
+              declared using <code>let</code> or <code>const</code> are only
+              accessible inside their block.
+            </li>
+          </ul>
+        </section>
+
+        <textarea>
+          function greet(name) {
+            return `Hello, ${name}!`;
+          }
+          console.log(greet("Alice"));
+        </textarea>
+      </section>
+
+      <h3>Types of Functions</h3>
+      <section class="general-explanation align apart">
+        <textarea>
+          function greet(name) {
+            return `Hello, ${name}!`;
+          }
+          console.log(greet("Alice"));
+        </textarea>
+
+        <section class="general-explanation column center-content">
+          <p>JavaScript supports different ways of defining functions:</p>
+          <ul>
+            <li>
+              <span class="text-highlight">Function Declaration:</span> Named
+              function that can be used before its declaration.
+            </li>
+            <li>
+              <span class="text-highlight">Function Expression:</span> Anonymous
+              function assigned to a variable.
+            </li>
+            <li>
+              <span class="text-highlight">Arrow Function:</span> Shorter syntax
+              for function expressions.
+            </li>
+          </ul>
+        </section>
+      </section>
+    </div>
+
+    <script src="../JS/index.js"></script>
+    <script src="../JS/JS_fundamentals.js"></script>
+  </body>
+</html>

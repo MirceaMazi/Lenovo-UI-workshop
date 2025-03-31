@@ -4,6 +4,7 @@ const pages = [
   "HTML_basics.html",
   "CSS_basics.html",
   "layout_fundamentals.html",
+  "JS_fundamentals.html",
 ];
 
 function getCurrentPage() {

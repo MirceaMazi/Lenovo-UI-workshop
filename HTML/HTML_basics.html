@@ -16,6 +16,8 @@
 
     <p>Please select a tag:</p>
     <select onchange="changeShownTag()">
+      <option value="head">head</option>
+      <option value="body">body</option>
       <option value="div">div</option>
       <option value="p">p</option>
       <option value="h1">h1</option>
@@ -28,6 +30,38 @@
     </select>
 
     <div class="tags-container">
+      <!-- head tag -->
+      <section class="example-tag center-content possible" id="head">
+        &lt;<span class="tag-format">head</span>&gt;
+      </section>
+      <section class="tag-explanation center-content possible" id="head">
+        <p>
+          The &lt;<span class="tag-format">head</span>&gt; tag contains
+          <span class="text-highlight">metadata</span>
+          about the document, such as the
+          <span class="text-highlight">title</span> and links to
+          <span class="text-highlight">stylesheets</span>. It is not displayed
+          directly on the webpage, but it helps in defining the page's settings
+          and linking external resources.
+        </p>
+      </section>
+
+      <!-- body tag -->
+      <section class="example-tag center-content possible" id="body">
+        &lt;<span class="tag-format">body</span>&gt;
+      </section>
+      <section class="tag-explanation center-content possible" id="body">
+        <p>
+          The &lt;<span class="tag-format">body</span>&gt; tag holds the
+          <span class="text-highlight">content</span> of the webpage that is
+          visible to the user. This includes
+          <span class="text-highlight">text</span>,
+          <span class="text-highlight">images</span>,
+          <span class="text-highlight">forms</span>, and other elements that
+          make up the page's structure and layout.
+        </p>
+      </section>
+
       <!-- div tag -->
       <section class="example-tag center-content possible" id="div">
         &lt;<span class="tag-format">div</span>&gt;
